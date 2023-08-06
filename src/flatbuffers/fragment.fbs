@@ -1,0 +1,34 @@
+namespace Fragments.index;
+
+table FragmentsGroup {
+    items: [Fragment];
+    coordination_matrix: [float];
+    ids: [uint];
+    items_keys: [uint];
+    items_keys_indices: [uint];
+    items_rels: [uint];
+    items_rels_indices: [uint];
+    fragment_keys: string;
+    id: string;
+    ifc_name: string;
+    ifc_description: string;
+    ifc_schema: string;
+    max_express_id: uint;
+    bounding_box: [float];
+}
+
+table Fragment {
+    position: [float];
+    normal: [float];
+    index: [int];
+    block_id: [int];
+    groups: [float];
+    materials: [float];
+    matrices: [float];
+    colors: [float];
+    ids: string;
+    id: string;
+    composites: string;
+}
+
+root_type FragmentsGroup;
