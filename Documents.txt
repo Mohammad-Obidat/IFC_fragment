@@ -1,0 +1,13 @@
+After I cloned the repository, I checked out the package.json to see what technologies were in play. 
+Then, I jumped into the three.js documentation to wrap my head around things. 
+To run the HTML files, I brought in Live Server, which smoothed out the process and helped me fix some path-related issues. 
+I even added a couple of missing functions to get everything working nicely.
+
+I decided to tackle some bonus challenges. 
+I tried getting the ifcLoader function from web-ifc-three to cooperate, 
+but ran into some pesky path problems. 
+Frustrating, right? Then, lo and behold, I stumbled upon a pre-existing ifcLoader built into three.js. 
+But, of course, life can't be too easy – I hit a WebAssembly snag, the dreaded "LinkError: WebAssembly.instantiate(): Import #0 module." 
+I searched high and low and finally discovered the web-ifc-viewer trick, involving ifcWorker for loading IFC files in browsers.
+
+Feeling hopeful, I gave ifcLoader.ifcManager.useWebWorkers a shot, only to discover that ifcManager was playing hard to get and didn't have that function. Classic.
